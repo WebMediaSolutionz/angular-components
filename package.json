@@ -1,5 +1,5 @@
 {
-  "name": "pulse@angular-components",
+  "name": "@pulse/angular-components",
   "version": "0.1.0",
   "description": "Pulse Component Library for Angular",
   "license": "LicenseRef-LICENSE",
