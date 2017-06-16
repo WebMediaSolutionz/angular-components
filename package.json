@@ -1,7 +1,12 @@
 {
-  "name": "angular-pulse-components",
-  "version": "0.0.0",
-  "license": "MIT",
+  "name": "pulse@angular-components",
+  "version": "0.1.0",
+  "description": "Pulse Component Library for Angular",
+  "license": "LicenseRef-LICENSE",
+  "repository": {
+    "type": "git",
+    "url": "git@git.pehr.in:pulse/angular-components.git"
+  },
   "scripts": {
     "ng": "ng",
     "start": "ng serve",
@@ -12,23 +17,27 @@
   },
   "private": true,
   "dependencies": {
+    "@angular/animations": "^4.0.0",
     "@angular/common": "^4.0.0",
     "@angular/compiler": "^4.0.0",
     "@angular/core": "^4.0.0",
     "@angular/forms": "^4.0.0",
     "@angular/http": "^4.0.0",
+    "@angular/material": "^2.0.0-beta.6",
+    "material2-srcs": "git+ssh://git@github.com/angular/material2.git",
     "@angular/platform-browser": "^4.0.0",
     "@angular/platform-browser-dynamic": "^4.0.0",
     "@angular/router": "^4.0.0",
+    "@types/node": "~6.0.60",
     "core-js": "^2.4.1",
     "rxjs": "^5.1.0",
-    "zone.js": "^0.8.4"
+    "zone.js": "^0.8.4",
+    "systemjs": "0.19.43"
   },
   "devDependencies": {
     "@angular/cli": "1.0.0",
     "@angular/compiler-cli": "^4.0.0",
     "@types/jasmine": "2.5.38",
-    "@types/node": "~6.0.60",
     "codelyzer": "~2.0.0",
     "jasmine-core": "~2.5.2",
     "jasmine-spec-reporter": "~3.2.0",

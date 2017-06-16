@@ -5,14 +5,37 @@ import { HttpModule } from '@angular/http';
 
 import { AppComponent } from './app.component';
 
+// Required to prevent 'Missing Platform' errors
+import { PlatformModule, StyleModule, MdRippleModule } from '@angular/material';
+
+// These are our own component declarations
+import {
+  PcButtonCssMatStyler,
+  PcButton,
+  PcAnchor,
+} from '../lib/button/button';
+
 @NgModule({
   declarations: [
-    AppComponent
+    AppComponent,
+    PcButtonCssMatStyler,
+    PcButton,
+    PcAnchor,
   ],
   imports: [
     BrowserModule,
     FormsModule,
-    HttpModule
+    HttpModule,
+    PlatformModule,
+    StyleModule,
+    MdRippleModule,
+  ],
+  exports: [
+    PlatformModule,
+    StyleModule,
+    PcButtonCssMatStyler,
+    PcButton,
+    PcAnchor,
   ],
   providers: [],
   bootstrap: [AppComponent]

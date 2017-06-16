@@ -1,0 +1,16 @@
+@import '../node_modules/material2-srcs/src/lib/core/theming/all-theme';
+// Plus imports for other components in your app.
+
+// Include the common styles for Angular Material. We include this here so that you only
+// have to load a single css file for Angular Material in your app.
+// **Be sure that you only ever include this mixin once!**
+@include mat-core();
+
+// Define the default theme (same as the example above).
+$pulse-app-primary: mat-palette($mat-indigo);
+$pulse-app-accent:  mat-palette($mat-teal, 800, 600, 900);
+$pulse-app-theme:   mat-light-theme($pulse-app-primary, $pulse-app-accent);
+
+// Include the default theme styles.
+@include angular-material-theme($pulse-app-theme);
+
