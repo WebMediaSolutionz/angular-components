@@ -8,15 +8,16 @@ import {
 } from '@angular/material';
 
 // Our component modules for export
-import {
-  PcButtonModule
-} from './button/index';
+import { PcCoreModule } from './core/index';
+import { PcButtonModule } from './button/index';
+
 
 const PULSE_COMPONENT_MODULES = [
   PlatformModule,
   StyleModule,
   MdRippleModule,
   PcButtonModule,
+  PcCoreModule,
 ];
 
 @NgModule({
