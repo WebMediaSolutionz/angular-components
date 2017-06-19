@@ -1,7 +1,9 @@
 import {
   Component,
   Directive,
+  ElementRef,
   ViewEncapsulation,
+  HostBinding,
   ChangeDetectionStrategy
 } from '@angular/core';
 
@@ -18,40 +20,27 @@ import 'material2-srcs/src/lib/button/button.scss';
 
 /**
  * Directive whose purpose is to add the mat- CSS styling to this selector.
+ * It also determines if the button is `flat` and adds (or removes) appropriate
+ * classnames as the case may be.
  * @docs-private
  */
 @Directive({
   selector: 'button[pc-button], a[pc-button]',
   host: {'class': 'mat-button'}
 })
-export class PcButtonCssMatStyler {}
+export class PcButtonCssMatStyler {
 
+  public elementRef: ElementRef | null;
 
-/**
- * Directives for associating primary, accent, and warning classes with those
- * properties.
- * @docs-private
- */
-@Directive({
-  selector: '[primary], [primary]',
-  host: {'class': 'mat-primary'}
-})
-export class PcCssMatPrimaryStyler {}
+  @HostBinding('class.mat-raised-button')
+  private get isRaised() {
+    return !this.elementRef.nativeElement.hasAttribute('flat');
+  };
 
-
-@Directive({
-  selector: '[accent], [accent]',
-  host: {'class': 'mat-accent'}
-})
-export class PcCssMatAccentStyler {}
-
-
-@Directive({
-  selector: '[warn], [warn]',
-  host: {'class': 'mat-warn'}
-})
-export class PcCssMatWarnStyler {}
-
+  constructor(elementRef: ElementRef) {
+    this.elementRef = elementRef;
+  }
+}
 
 
 /**
