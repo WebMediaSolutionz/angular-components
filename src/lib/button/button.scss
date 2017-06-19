@@ -1,0 +1,95 @@
+
+// Button theming mixins
+@import '../../../node_modules/material2-srcs/src/lib/button/button-theme';
+
+// High-level theming library
+//@import '../../../node_modules/material2-srcs/src/lib/core/theming/theming';
+
+// Low-level direct colour variable access
+@import '../../../node_modules/material2-srcs/src/lib/core/theming/palette';
+
+.mat-active {
+  border: 1px solid rgba(0, 0, 0, 0.2);
+  box-shadow: none;
+}
+
+.mat-button {
+
+  &.mat-success {
+    color: map-get($mat-green, 500);
+
+    &:hover {
+      color: map-get($mat-green, 700);
+    }
+  }
+
+  &.mat-warning {
+    color: map-get($mat-orange, 500);
+
+    &:hover {
+      color: map-get($mat-orange, 700);
+    }
+  }
+
+  &.mat-danger {
+    background-color: map-get($mat-red, 500);
+    color: white;
+
+    &:hover {
+      background-color: map-get($mat-red, 700);
+      color: white;
+    }
+  }
+
+  &.size-small {
+    font-size: 11px;
+    line-height: 26px;
+    min-width: 66px;
+  }
+
+  &.size-large {
+    font-size: 16px;
+    line-height: 40px;
+  }
+
+  &.fill {
+    display: block;
+    margin-top: 10px;
+    width: 100%;
+    box-sizing: border-box;
+  }
+}
+
+.mat-raised-button {
+
+  &.mat-success {
+    background-color: map-get($mat-green, 700);
+    color: white;
+
+    &:hover {
+      background-color: map-get($mat-green, 900);
+      color: white;
+    }
+  }
+
+  &.mat-warning {
+    background-color: map-get($mat-orange, 700);
+    color: white;
+
+    &:hover {
+      background-color: map-get($mat-orange, 900);
+      color: white;
+    }
+  }
+
+  &.mat-danger {
+    background-color: map-get($mat-red, 700);
+    color: white;
+
+    &:hover {
+      background-color: map-get($mat-red, 700);
+      color: white;
+    }
+  }
+
+}

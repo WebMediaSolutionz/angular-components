@@ -16,6 +16,7 @@ import {
 // Inherit Material Design's template and style
 import 'material2-srcs/src/lib/button/button.html';
 import 'material2-srcs/src/lib/button/button.scss';
+import './button.scss';
 
 
 /**
@@ -26,15 +27,22 @@ import 'material2-srcs/src/lib/button/button.scss';
  */
 @Directive({
   selector: 'button[pc-button], a[pc-button]',
-  host: {'class': 'mat-button'}
+  host: {'class': 'mat-button mat-raised-button'}
 })
-export class PcButtonCssMatStyler {
+export class PcButtonStyler {
 
   public elementRef: ElementRef | null;
 
-  @HostBinding('class.mat-raised-button')
-  private get isRaised() {
-    return !this.elementRef.nativeElement.hasAttribute('flat');
+  // Indicates that a button is somehow activated (selected, or whatever).
+  @HostBinding('class.mat-active')
+  private get _isActive() {
+    return this.elementRef.nativeElement.hasAttribute('active');
+  };
+
+  // Display button as a block-level element (fill available space)
+  @HostBinding('class.fill')
+  private get _isFill() {
+    return this.elementRef.nativeElement.hasAttribute('fill');
   };
 
   constructor(elementRef: ElementRef) {
@@ -53,7 +61,10 @@ export class PcButtonCssMatStyler {
     '[disabled]': 'disabled || null',
   },
   template: require('material2-srcs/src/lib/button/button.html'),
-  styles: [require('material2-srcs/src/lib/button/button.scss')],
+  styles: [
+    require('material2-srcs/src/lib/button/button.scss'),
+    require('./button.scss')
+  ],
   inputs: ['disabled', 'color'],
   encapsulation: ViewEncapsulation.None,
   changeDetection: ChangeDetectionStrategy.OnPush,
@@ -75,7 +86,10 @@ export class PcButton extends MdButton { }
   },
   inputs: ['disabled', 'color'],
   template: require('material2-srcs/src/lib/button/button.html'),
-  styles: [require('material2-srcs/src/lib/button/button.scss')],
+  styles: [
+    require('material2-srcs/src/lib/button/button.scss'),
+    require('./button.scss')
+  ],
   encapsulation: ViewEncapsulation.None
 })
 

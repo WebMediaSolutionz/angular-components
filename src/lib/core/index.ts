@@ -5,14 +5,22 @@ import {
   MdRippleModule,
   StyleModule
 } from '@angular/material';
+
+// These are the core components to e xport
 import {
-  PcCssMatPrimaryStyler,
-  PcCssMatAccentStyler,
-  PcCssMatWarnStyler
-} from './priority';
+  PcPrimaryIntentStyler,
+  PcSuccessIntentStyler,
+  PcWarningIntentStyler,
+  PcDangerIntentStyler
+} from './intent';
+
+import {
+  PcLargeSizeStyler,
+  PcSmallSizeStyler
+} from './size';
 
 
-export * from './priority';
+export * from './intent';
 
 
 @NgModule({
@@ -20,18 +28,24 @@ export * from './priority';
     CommonModule,
     MdRippleModule,
     MdCommonModule,
-    StyleModule,
+    StyleModule
   ],
   exports: [
-    PcCssMatPrimaryStyler,
-    PcCssMatAccentStyler,
-    PcCssMatWarnStyler,
+    PcPrimaryIntentStyler,
+    PcSuccessIntentStyler,
+    PcWarningIntentStyler,
+    PcDangerIntentStyler,
+    PcLargeSizeStyler,
+    PcSmallSizeStyler,
     MdCommonModule
   ],
   declarations: [
-    PcCssMatPrimaryStyler,
-    PcCssMatAccentStyler,
-    PcCssMatWarnStyler
+    PcPrimaryIntentStyler,
+    PcSuccessIntentStyler,
+    PcWarningIntentStyler,
+    PcLargeSizeStyler,
+    PcSmallSizeStyler,
+    PcDangerIntentStyler
   ],
 })
 export class PcCoreModule {}

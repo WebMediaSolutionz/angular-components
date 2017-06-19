@@ -8,28 +8,15 @@ import { AppComponent } from './app.component';
 // Required to prevent 'Missing Platform' errors
 import { PlatformModule, StyleModule, MdRippleModule } from '@angular/material';
 
-// These are our own component declarations
-import {
-  PcButtonCssMatStyler,
-  PcButton,
-  PcAnchor,
-} from '../lib/button/button';
+// These are our own libraries, imported as modules so we don't have to
+// explicitly import each individual control.
+import { PcButtonModule } from '../lib/button/index';
+import { PcCoreModule } from '../lib/core/index';
 
-import {
-  PcCssMatPrimaryStyler,
-  PcCssMatAccentStyler,
-  PcCssMatWarnStyler
-} from '../lib/core/priority';
 
 @NgModule({
   declarations: [
     AppComponent,
-    PcButtonCssMatStyler,
-    PcCssMatPrimaryStyler,
-    PcCssMatAccentStyler,
-    PcCssMatWarnStyler,
-    PcButton,
-    PcAnchor,
   ],
   imports: [
     BrowserModule,
@@ -37,17 +24,15 @@ import {
     HttpModule,
     PlatformModule,
     StyleModule,
+    PcButtonModule,
+    PcCoreModule,
     MdRippleModule,
   ],
   exports: [
     PlatformModule,
     StyleModule,
-    PcButtonCssMatStyler,
-    PcCssMatPrimaryStyler,
-    PcCssMatAccentStyler,
-    PcCssMatWarnStyler,
-    PcButton,
-    PcAnchor,
+    PcButtonModule,
+    PcCoreModule,
   ],
   providers: [],
   bootstrap: [AppComponent]
