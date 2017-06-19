@@ -8,7 +8,10 @@ import {
 import {
   PcAnchor,
   PcButton,
-  PcButtonCssMatStyler
+  PcButtonCssMatStyler,
+  PcButtonCssMatPrimaryStyler,
+  PcButtonCssMatAccentStyler,
+  PcButtonCssMatWarnStyler
 } from './button';
 
 
@@ -26,12 +29,18 @@ export * from './button';
     PcButton,
     PcAnchor,
     PcButtonCssMatStyler,
+    PcButtonCssMatPrimaryStyler,
+    PcButtonCssMatAccentStyler,
+    PcButtonCssMatWarnStyler,
     MdCommonModule
   ],
   declarations: [
     PcButton,
     PcAnchor,
-    PcButtonCssMatStyler
+    PcButtonCssMatStyler,
+    PcButtonCssMatPrimaryStyler,
+    PcButtonCssMatAccentStyler,
+    PcButtonCssMatWarnStyler
   ],
 })
 export class PcButtonModule {}

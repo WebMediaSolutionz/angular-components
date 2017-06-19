@@ -15,10 +15,19 @@ import {
   PcAnchor,
 } from '../lib/button/button';
 
+import {
+  PcCssMatPrimaryStyler,
+  PcCssMatAccentStyler,
+  PcCssMatWarnStyler
+} from '../lib/core/priority';
+
 @NgModule({
   declarations: [
     AppComponent,
     PcButtonCssMatStyler,
+    PcCssMatPrimaryStyler,
+    PcCssMatAccentStyler,
+    PcCssMatWarnStyler,
     PcButton,
     PcAnchor,
   ],
@@ -34,6 +43,9 @@ import {
     PlatformModule,
     StyleModule,
     PcButtonCssMatStyler,
+    PcCssMatPrimaryStyler,
+    PcCssMatAccentStyler,
+    PcCssMatWarnStyler,
     PcButton,
     PcAnchor,
   ],
