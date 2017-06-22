@@ -16,28 +16,32 @@
 .mat-button {
 
   &.mat-success {
-    color: map-get($mat-green, 500);
+    $base-color: $mat-green;
+
+    color: map-get($base-color, 700);
+
+    .mat-ripple-element {
+      background-color: mat-color($base-color, 700, 0.2);
+    }
 
     &:hover {
-      color: map-get($mat-green, 700);
+      color: map-get($base-color, 900);
     }
   }
 
   &.mat-warning {
-    color: map-get($mat-orange, 500);
+    color: map-get($mat-orange, 700);
 
     &:hover {
-      color: map-get($mat-orange, 700);
+      color: map-get($mat-orange, 900);
     }
   }
 
   &.mat-danger {
-    background-color: map-get($mat-red, 500);
-    color: white;
+    color: map-get($mat-red, 700);
 
     &:hover {
-      background-color: map-get($mat-red, 700);
-      color: white;
+      color: map-get($mat-red, 900);
     }
   }
 

@@ -6,9 +6,9 @@ import {
   StyleModule
 } from '@angular/material';
 import {
+  PcButtonStyler,
   PcAnchor,
-  PcButton,
-  PcButtonStyler
+  PcButton
 } from './button';
 
 
@@ -18,20 +18,20 @@ export * from './button';
 @NgModule({
   imports: [
     CommonModule,
-    MdRippleModule,
     MdCommonModule,
+    MdRippleModule,
     StyleModule,
   ],
   exports: [
+    PcButtonStyler,
     PcButton,
     PcAnchor,
-    PcButtonStyler,
     MdCommonModule
   ],
   declarations: [
+    PcButtonStyler,
     PcButton,
-    PcAnchor,
-    PcButtonStyler
+    PcAnchor
   ],
 })
 export class PcButtonModule {}
