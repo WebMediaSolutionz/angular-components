@@ -26,22 +26,32 @@ import './button.scss';
  * @docs-private
  */
 @Directive({
-  selector: 'button[pc-button], a[pc-button]',
-  host: {'class': 'mat-button mat-raised-button'}
+  selector: 'button[pc-button], a[pc-button], ' +
+            'button[pc-flat-button], a[pc-flat-button]',
+  host: {'class': 'mat-button'}
 })
 export class PcButtonStyler {
 
-  public elementRef: ElementRef | null;
+  elementRef: ElementRef | null;
+
+  // Indicates that a button should be 'raised' vs. flat (border or borderless)
+  /** @internal */
+  @HostBinding('class.mat-raised-button')
+  get _isRaised() {
+    return !this.elementRef.nativeElement.hasAttribute('pc-flat-button');
+  };
 
   // Indicates that a button is somehow activated (selected, or whatever).
+  /** @internal */
   @HostBinding('class.mat-active')
-  private get _isActive() {
+  get _isActive() {
     return this.elementRef.nativeElement.hasAttribute('active');
   };
 
   // Display button as a block-level element (fill available space)
+  /** @internal */
   @HostBinding('class.fill')
-  private get _isFill() {
+  get _isFill() {
     return this.elementRef.nativeElement.hasAttribute('fill');
   };
 
@@ -56,7 +66,7 @@ export class PcButtonStyler {
  */
 @Component({
   moduleId: module.id,
-  selector: 'button[pc-button]',
+  selector: 'button[pc-button], button[pc-flat-button]',
   host: {
     '[disabled]': 'disabled || null',
   },
@@ -78,7 +88,7 @@ export class PcButton extends MdButton { }
  */
 @Component({
   moduleId: module.id,
-  selector: `a[pc-button]`,
+  selector: `a[pc-button], a[pc-flat-button]`,
   host: {
     '[attr.disabled]': 'disabled || null',
     '[attr.aria-disabled]': '_isAriaDisabled',

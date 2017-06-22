@@ -1,6 +1,20 @@
 
 <h1>Buttons</h1>
 
+<p>There are two basic categories of button-like objects: buttons and anchors.
+  Both are based on the existing <code>&lt;button&gt;</code> and 
+  <code>&lt;a&gt;</code> components in your browser; they are invoked by
+  adding the custom property <code>pc-button</code> or <code>pc-flat-button</code>
+  for a flat (borderless) button.</p>
+
+<h2>Usage</h2>
+
+<p>The <code>&lt;button&gt;</code> tag should be used when performing an action
+  on the current view; the <code>&lt;a&gt;</code> tag should be used when navigating to
+  another view.</p>
+
+<h2>Examples</h2>
+
 <div class="docs-example-wrapper">
 
   <div class="docs-example">
@@ -80,6 +94,92 @@
     <div>
       <a pc-button fill>Anchor</a>
       <button pc-button fill><!-- TODO: <pc-icon></pc-icon> --> Button</button>
+    </div>
+  </div>
+
+</div>
+
+<h2>Flat Examples</h2>
+
+<div class="docs-example-wrapper">
+
+  <div class="docs-example">
+    <code>default</code>
+    <div>
+      <a pc-flat-button>Anchor</a>
+      <button pc-flat-button><!-- TODO: <pc-icon></pc-icon> --> Button</button>
+    </div>
+  </div>
+
+  <div class="docs-example">
+    <code>[disabled="disabled"]</code>
+    <div>
+      <a pc-flat-button disabled="disabled">Anchor</a>
+      <button pc-flat-button disabled="disabled"><!-- TODO: <pc-icon></pc-icon> --> Button</button>
+    </div>
+  </div>
+
+  <div class="docs-example">
+    <code>[intent="primary"]</code>
+    <div>
+      <a pc-flat-button intent="primary">Anchor</a>
+      <button pc-flat-button intent="primary"><!-- TODO: <pc-icon></pc-icon> --> Button</button>
+    </div>
+  </div>
+
+  <div class="docs-example">
+    <code>[intent="success"]</code>
+    <div>
+      <a pc-flat-button intent="success">Anchor</a>
+      <button pc-flat-button intent="success"><!-- TODO: <pc-icon></pc-icon> --> Button</button>
+    </div>
+  </div>
+
+  <div class="docs-example">
+    <code>[intent="warning"]</code>
+    <div>
+      <a pc-flat-button intent="warning">Anchor</a>
+      <button pc-flat-button intent="warning"><!-- TODO: <pc-icon></pc-icon> --> Button</button>
+    </div>
+  </div>
+
+  <div class="docs-example">
+    <code>[intent="danger"]</code>
+    <div>
+      <a pc-flat-button intent="danger">Anchor</a>
+      <button pc-flat-button intent="danger"><!-- TODO: <pc-icon></pc-icon> --> Button</button>
+    </div>
+  </div>
+
+  <div class="docs-example">
+    <code>[active]</code>
+    <div>
+      <a pc-flat-button active>Anchor</a>
+      <button pc-flat-button active><!-- TODO: <pc-icon></pc-icon> --> Button</button>
+    </div>
+  </div>
+
+  <div class="docs-example">
+    <code>[size=small]</code>
+    <div>
+      <a pc-flat-button size="small">Anchor</a>
+      <button pc-flat-button size="small"><!-- TODO: <pc-icon></pc-icon> --> Button</button>
+    </div>
+  </div>
+
+  <div class="docs-example">
+    <code>[size=large]</code>
+    <div>
+      <a pc-flat-button size="large">Anchor</a>
+      <button pc-flat-button size="large"><!-- TODO: <pc-icon></pc-icon> --> Button</button>
+    </div>
+  </div>
+
+  <div class="docs-example" style="flex: 1 0 auto;">
+    <code>[fill]</code>
+    <div>
+      <a pc-flat-button fill>Anchor</a>
+      <button pc-flat-button fill><!-- TODO: <pc-icon></pc-icon> --> Button</button>
     </div>
   </div>
 
