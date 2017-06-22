@@ -20,6 +20,17 @@ In your project, run `npm install --save git+ssh://git@git.pehr.in/pulse/angular
 replacing `${VERSION}` with the tag, branch, or refid to install.
 
 
+### Add `require` to Typings
+
+In your project, edit `src/typings.d.ts` file and add the following line:
+
+    declare var require: any;
+
+This will make the `require()` command available. While you don't need it directly,
+the components you are invoking do (in order to in turn load templates and stylesheets
+from a third-party library by inlining them).
+
+
 ### Import a theme
  
 Our underlying library requires a theme to correctly render objects. Edit your project's
