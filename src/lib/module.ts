@@ -17,7 +17,7 @@ const PULSE_COMPONENT_MODULES = [
   StyleModule,
   MdRippleModule,
   PcButtonModule,
-  PcCoreModule,
+  PcCoreModule
 ];
 
 @NgModule({
@@ -27,4 +27,4 @@ const PULSE_COMPONENT_MODULES = [
 
 // Import this to load all component modules, or import only the individual
 // module libraries you'll use if you want to preserve resources.
-export class PulseComponentModule {}
+export class PulseComponentModule { }
