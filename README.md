@@ -49,12 +49,12 @@ your template, such as `app.component.html`: `<pc-button intent="primary">Save P
 ## Developing Components
 
 
-## Check Out and Install
+### Check Out and Install
 
 Check out and install the project locally using `git clone` then `npm install`.
 
 
-## Development server
+### Development server
 
 Run `ng serve` for a dev server. Navigate to `http://localhost:4200/`. 
 The app will automatically reload if you change any of the source files. If you
@@ -62,7 +62,7 @@ wish to run on a different port, pass the `--port ${PORTNUM}` argument to the
 `ng serve` command (i.e. if you're already running an applicaiton on port 4200).
 
 
-## Linking via NPM
+### Linking via NPM
 
 An ideal way to test the library is in a project that depends on it. Rather than 
 having to continuously commit and redownload your branch to test it, use NPM's 
@@ -76,30 +76,30 @@ linking to the checked out development copy of the component library, where any
 changes you make will be reflected in your project.
 
 
-## Code scaffolding
+### Code scaffolding
 
 Run `ng generate component component-name` to generate a new component. You can 
 also use `ng generate directive/pipe/service/class/module`.
 
 
-## Build
+### Build
 
 Run `ng build` to build the project. The build artifacts will be stored in t
 he `dist/` directory. Use the `-prod` flag for a production build.
 
 
-## Running unit tests
+### Running unit tests
 
 Run `ng test` to execute the unit tests via [Karma](https://karma-runner.github.io).
 
 
-## Running end-to-end tests
+### Running end-to-end tests
 
 Run `ng e2e` to execute the end-to-end tests via [Protractor](http://www.protractortest.org/).
 Before running the tests make sure you are serving the app via `ng serve`.
 
 
-## Further help
+### Further help
 
 To get more help on the Angular CLI use `ng help` or go check out the 
 [Angular CLI README](https://github.com/angular/angular-cli/blob/master/README.md).
