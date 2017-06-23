@@ -10,8 +10,10 @@ import { PlatformModule, StyleModule, MdRippleModule } from '@angular/material';
 
 // These are our own libraries, imported as modules so we don't have to
 // explicitly import each individual control.
-import { PcButtonModule } from '../lib/button/index';
 import { PcCoreModule } from '../lib/core/index';
+import { PcButtonModule } from '../lib/button/index';
+import { PcCardModule } from '../lib/card/index';
+
 
 
 @NgModule({
@@ -23,16 +25,18 @@ import { PcCoreModule } from '../lib/core/index';
     FormsModule,
     HttpModule,
     PlatformModule,
-    StyleModule,
-    PcButtonModule,
-    PcCoreModule,
     MdRippleModule,
+    StyleModule,
+    PcCoreModule,
+    PcButtonModule,
+    PcCardModule,
   ],
   exports: [
     PlatformModule,
     StyleModule,
-    PcButtonModule,
     PcCoreModule,
+    PcButtonModule,
+    PcCardModule,
   ],
   providers: [],
   bootstrap: [AppComponent]
