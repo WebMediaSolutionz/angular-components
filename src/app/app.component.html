@@ -184,3 +184,47 @@
   </div>
 
 </div>
+
+<h1>Cards</h1>
+
+<p>Cards describe a related set of information or controls, usually with a heading 
+  or footer (or both), and sometimes with a set of actions that can be performed,
+  such as the submission of data entered into a form in the card content.</p>
+
+<p>Cards are distinct from <em>widgets</em>, which are discrete functionality but
+  typically *do not* have heading/footer with the traditional action buttons
+  at the bottom of the widget. See widget documentation for details.</p>
+
+<div class="docs-example-wrapper">
+
+  <div class="docs-example" style="flex: 1 0 auto; max-width: 400px;">
+    <code>pc-card</code>
+    <div>
+      
+      <pc-card class="example-card" tabindex="0">
+        
+        <pc-card-header>
+          <h1 pc-card-title>Card Title</h1>
+          <pc-card-subtitle>Card Subtitle (optional)</pc-card-subtitle>
+        </pc-card-header>
+
+        <!-- <img pc-card-image src="assets/img/examples/shiba2.jpg"> -->
+
+        <pc-card-content>
+          <p>
+            Your card content, whatever it may be, goes here.
+            What happens when the content needs to be wider?
+          </p>
+        </pc-card-content>
+
+        <pc-card-actions>
+          <button pc-button intent="primary">Primary</button>
+          <button pc-flat-button intent="">Alternate</button>
+        </pc-card-actions>
+        
+        
+      </pc-card>
+      
+    </div>
+  </div>
+</div>
