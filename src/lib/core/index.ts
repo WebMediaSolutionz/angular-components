@@ -20,9 +20,6 @@ import {
 } from './size';
 
 
-export * from './intent';
-
-
 @NgModule({
   imports: [
     CommonModule,
