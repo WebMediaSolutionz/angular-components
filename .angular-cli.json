@@ -22,6 +22,9 @@
         "styles.css",
         "../node_modules/@angular/material/prebuilt-themes/indigo-pink.css"
       ],
+      "stylePreprocessorOptions": {
+        "includePaths": []
+      },
       "scripts": [],
       "environmentSource": "environments/environment.ts",
       "environments": {
@@ -52,7 +55,9 @@
     }
   },
   "defaults": {
-    "styleExt": "css",
-    "component": {}
+    "styleExt": "scss",
+    "component": {
+      "inlineStyle": false
+    }
   }
 }

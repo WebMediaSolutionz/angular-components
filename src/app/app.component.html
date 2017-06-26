@@ -228,3 +228,50 @@
     </div>
   </div>
 </div>
+
+<h1>Inputs</h1>
+
+<p>Inputs, at their simplest, incorporate a field where text can be entered
+  using a keyboard. They have a label to describe their content, and may
+  report a message (or intent) describing their [validation] state.</p>
+
+<p>The following <code>types</code> are supported:</p>
+
+<ul>
+  <li>date</li>
+  <li>datetime-local</li>
+  <li>email</li>
+  <li>month</li>
+  <li>number</li>
+  <li>password</li>
+  <li>search</li>
+  <li>tel</li>
+  <li>text</li>
+  <li>time</li>
+  <li>url</li>
+  <li>week</li>
+</ul>
+
+<p>You can set the <code>floatPlaceholder</code> attribute to 'auto', 'always',
+  or 'never'. This affects the appearance of the placeholder text when the input
+  contains entered text..</p>
+
+<div class="docs-example-wrapper">
+
+  <div class="docs-example" style="flex: 1 0 auto; max-width: 400px;">
+    <code>pc-input-container</code>
+    <div>
+
+      <pc-input-container>
+        <input pc-input type="text" required
+               placeholder="Input Example"
+               [formControl]="testFormControl" />
+        <pc-hint>This is some hint text.</pc-hint>
+        <pc-error *ngIf="testFormControl.hasError('required')">
+          This field is required
+        </pc-error>
+      </pc-input-container>
+
+    </div>
+  </div>
+</div>
