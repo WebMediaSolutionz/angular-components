@@ -40,6 +40,7 @@ import { PcInputModule } from '../lib/input/index';
   exports: [
     PlatformModule,
     StyleModule,
+    BrowserAnimationsModule,
     PcCoreModule,
     PcButtonModule,
     PcCardModule,

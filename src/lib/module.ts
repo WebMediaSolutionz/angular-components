@@ -6,18 +6,24 @@ import {
   StyleModule,
   MdRippleModule
 } from '@angular/material';
+import { BrowserAnimationsModule } from '@angular/platform-browser/animations';
 
 // Our component modules for export
 import { PcCoreModule } from './core/index';
 import { PcButtonModule } from './button/index';
+import { PcCardModule } from './card/index';
+import { PcInputModule } from './input/index';
 
 
 const PULSE_COMPONENT_MODULES = [
   PlatformModule,
   StyleModule,
   MdRippleModule,
+  BrowserAnimationsModule,
+  PcCoreModule,
   PcButtonModule,
-  PcCoreModule
+  PcCardModule,
+  PcInputModule,
 ];
 
 @NgModule({
