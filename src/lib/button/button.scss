@@ -30,18 +30,22 @@
   }
 
   &.mat-warning {
-    color: map-get($mat-orange, 700);
+    $base-color: $mat-orange;
+
+    color: map-get($base-color, 700);
 
     &:hover {
-      color: map-get($mat-orange, 900);
+      color: map-get($base-color, 900);
     }
   }
 
   &.mat-danger {
-    color: map-get($mat-red, 700);
+    $base-color: $mat-red;
+
+    color: map-get($base-color, 700);
 
     &:hover {
-      color: map-get($mat-red, 900);
+      color: map-get($base-color, 900);
     }
   }
 
@@ -67,31 +71,37 @@
 .mat-raised-button {
 
   &.mat-success {
-    background-color: map-get($mat-green, 700);
+    $base-color: $mat-green;
+
+    background-color: map-get($base-color, 700);
     color: white;
 
     &:hover {
-      background-color: map-get($mat-green, 900);
+      background-color: map-get($base-color, 900);
       color: white;
     }
   }
 
   &.mat-warning {
-    background-color: map-get($mat-orange, 700);
+    $base-color: $mat-orange;
+
+    background-color: map-get($base-color, 700);
     color: white;
 
     &:hover {
-      background-color: map-get($mat-orange, 900);
+      background-color: map-get($base-color, 900);
       color: white;
     }
   }
 
   &.mat-danger {
-    background-color: map-get($mat-red, 700);
+    $base-color: $mat-red;
+
+    background-color: map-get($base-color, 700);
     color: white;
 
     &:hover {
-      background-color: map-get($mat-red, 700);
+      background-color: map-get($base-color, 700);
       color: white;
     }
   }
