@@ -1,1 +1,53 @@
-// TODO
+
+// High-level theming library
+// @import '../../../node_modules/material2-srcs/src/lib/core/theming/theming';
+
+// Low-level direct colour variable access
+@import '../../../node_modules/material2-srcs/src/lib/core/theming/palette';
+
+// Our theme
+@import '../../theme';
+
+
+@mixin pc-input-color($base-color) {
+
+  .mat-input-placeholder {
+    color: rgba(mat-color($base-color, 900), 0.6);
+  }
+
+  pc-hint,
+  pc-error,
+  .mat-input-error {
+    color: mat-color($base-color, 900);
+  }
+
+  .mat-input-underline {
+    background-color: rgba(mat-color($base-color, 700), 0.3);
+  }
+
+  &.mat-input-invalid .mat-input-ripple {
+    background-color: mat-color($base-color, 700);
+  }
+
+}
+
+
+pc-input-container {
+
+  &.mat-primary {
+    @include pc-input-color($pulse-app-primary);
+  }
+
+  &.mat-success {
+    @include pc-input-color($mat-green);
+  }
+
+  &.mat-warning {
+    @include pc-input-color($mat-orange);
+  }
+
+  &.mat-danger {
+    @include pc-input-color($mat-red);
+  }
+
+}

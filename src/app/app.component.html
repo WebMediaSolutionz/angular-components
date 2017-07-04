@@ -258,20 +258,108 @@
 
 <div class="docs-example-wrapper">
 
-  <div class="docs-example" style="flex: 1 0 auto; max-width: 400px;">
+  <div class="docs-example">
     <code>pc-input-container</code>
     <div>
 
       <pc-input-container>
-        <input pc-input type="text" required
-               placeholder="Input Example"
+        <input pc-input type="text" required placeholder="Input Example"
                [formControl]="testFormControl" />
         <pc-hint>This is some hint text.</pc-hint>
-        <pc-error *ngIf="testFormControl.hasError('required')">
-          This field is required
-        </pc-error>
+        <pc-error *ngIf="testFormControl.hasError('required')">This field is required</pc-error>
       </pc-input-container>
 
     </div>
   </div>
+
+  <div class="docs-example">
+    <code>.ng-invalid</code>
+    <div>
+
+      <pc-input-container>
+        <input pc-input type="text" required placeholder="Input Example"
+               [formControl]="testFormControl2" />
+        <pc-hint>Blur me to reveal an error.</pc-hint>
+        <pc-error *ngIf="true">This is an error</pc-error>
+      </pc-input-container>
+
+    </div>
+  </div>
+
+  <div class="docs-example">
+    <code>[intent=danger]</code>
+    <div>
+
+      <pc-input-container invalid="true" intent="danger">
+        <input pc-input type="text" required placeholder="Input Example"
+               [formControl]="testFormControl3" />
+        <pc-hint>This field contains an error.</pc-hint>
+        <pc-error *ngIf="true">This is the error</pc-error>
+      </pc-input-container>
+
+    </div>
+  </div>
+
+  <div class="docs-example">
+
+    <code>[intent=success]</code>
+    <div>
+
+      <pc-input-container intent="success">
+        <input pc-input type="text" required placeholder="Input Example"
+               [formControl]="testFormControl4" />
+        <pc-hint>This field is successful.</pc-hint>
+        <pc-error *ngIf="true">This is an error</pc-error>
+      </pc-input-container>
+
+    </div>
+  </div>
+
+  <div class="docs-example">
+
+    <code>[intent=warning]</code>
+    <div>
+
+      <pc-input-container intent="warning">
+        <input pc-input type="text" required placeholder="Input Example"
+               [formControl]="testFormControl5" />
+        <pc-hint>This field contains a warning.</pc-hint>
+        <pc-error *ngIf="true">This is an error</pc-error>
+      </pc-input-container>
+
+    </div>
+  </div>
+
+  <div class="docs-example">
+
+    <code>[intent=primary]</code>
+    <div>
+
+      <pc-input-container intent="primary">
+        <input pc-input type="text" required placeholder="Input Example"
+               [formControl]="testFormControl6" />
+        <pc-hint>This field has a primary intent.</pc-hint>
+        <pc-error *ngIf="true">This is an error</pc-error>
+      </pc-input-container>
+
+    </div>
+  </div>
+
+  <div class="docs-example">
+
+    <code>pc-prefix/pc-suffix</code>
+    <div>
+
+      <pc-input-container>
+        <strong pc-prefix>$&nbsp;</strong>
+        <input pc-input type="text" placeholder="Input Example"
+               [formControl]="testFormControl7" />
+        <strong pc-suffix>%</strong>
+        <pc-hint>This field has a prefix/suffix</pc-hint>
+        <pc-error *ngIf="true">This is an error</pc-error>
+      </pc-input-container>
+
+    </div>
+  </div>
+
 </div>
