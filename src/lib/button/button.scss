@@ -1,12 +1,12 @@
 
 // Button theming mixins
-@import '../../../node_modules/material2-srcs/src/lib/button/button-theme';
+@import 'node_modules/material2-srcs/src/lib/button/button-theme';
 
 // High-level theming library
-//@import '../../../node_modules/material2-srcs/src/lib/core/theming/theming';
+//@import 'node_modules/material2-srcs/src/lib/core/theming/theming';
 
 // Low-level direct colour variable access
-@import '../../../node_modules/material2-srcs/src/lib/core/theming/palette';
+@import 'node_modules/material2-srcs/src/lib/core/theming/palette';
 
 .mat-active {
   border: 1px solid rgba(0, 0, 0, 0.2);
